@@ -192,7 +192,31 @@ function removeUser(userId) {
     }
 }
 
-// Display users and chat messages when the page loads
+function getEventTarget(e) {
+    e = e || window.event;
+    return e.target || e.srcElement;
+}
+
+var ul = document.getElementById('userList');
+
+ul.onclick = function(event) {
+    var target = getEventTarget(event);
+    var clickedItemContent = target.innerHTML;
+    var contentDisplay = document.getElementById('chatWindow');
+    contentDisplay.innerHTML = clickedItemContent;
+
+    contentDisplay.classList.remove('hidden');
+
+}
+document.onclick = function(event) {
+        var contentDisplay = document.getElementById('chatWindow');
+        var target = getEventTarget(event);
+
+        if (target !== contentDisplay && !ul.contains(target)) {
+            contentDisplay.classList.add('hidden');
+        }
+    }
+    // Display users and chat messages when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     displayUsers();
     displayChatMessages();
