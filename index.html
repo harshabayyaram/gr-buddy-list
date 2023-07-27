@@ -6,33 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
+    <div class="body">
+        <div class="header">
+            <div class="pic">
+                <img src="./images/5.jfif" alt="">
+            </div>
+            <div class="addUser">
+                <img src="./images/add_contact.png" alt="">
+                <img src="./images/3dots.png" alt="">
+            </div>
+        </div>
 
-    <div class="header">
-        <div class="pic">
-            <img src="./images/image1.jfif" alt="">
+
+
+        <div class="container">
+
+            <div class="user-list">
+                <ul id="userList"></ul>
+            </div>
+
+
+            <div class=" chat-window " id="chatWindow ">
+                <!-- <ul id="chatList "></ul> -->
+
+                <div class="chats ">
+                    <div class="chats-order-header ">
+                        <div class="chat-image ">
+                            <img src="./images/5.jfif " alt=" ">
+                        </div>
+                    </div>
+
+
+
+                    <div class="chats-order sender ">Hi john</div>
+                    <div class="chats-order receiver ">hi john</div>
+
+                    <div class="chats-order sender ">Hi john</div>
+                    <div class="chats-order receiver ">hi john</div>
+
+                </div>
+
+                <div class="textbox">
+                    <input type="text " placeholder="Enter the message here... ">
+                    <img src="./images/attachment.png " alt=" ">
+                    <img src="./images/send.png " alt=" ">
+                </div>
+            </div>
+
+
         </div>
-        <div class="addUser">
-            <img src="./images/image1.jfif" alt="">
-        </div>
+
+
+
+        <script src="./js/script.js "></script>
+
     </div>
-
-
-
-    <div class="container">
-        <div class="user-list">
-            <ul id="userList"></ul>
-        </div>
-        <div class="chat-window" id="chatWindow">
-            <ul id="chatList"></ul>
-        </div>
-    </div>
-
-
-
-    <script src="./js/script.js"></script>
 </body>
 
 </html>

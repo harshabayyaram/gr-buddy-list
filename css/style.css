@@ -1,8 +1,18 @@
+body {
+    margin: 0;
+}
+
+.body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+
 .container {
     display: flex;
-    max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0px;
+    background-color: gray;
 }
 
 .hidden {
@@ -11,12 +21,14 @@
 
 .user-list {
     flex: 1;
+    margin: 1px;
+    background-color: white;
 }
 
 .chat-window {
-    flex: 2;
-    margin-left: 20px;
-    background-color: gray;
+    flex: 1;
+    margin-left: 0px;
+    background-color: white;
 }
 
 .user-list h2,
@@ -30,7 +42,38 @@ ul {
     margin: 0;
 }
 
-.user-list li,
+li {
+    display: flex;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border-bottom: 3px solid gray;
+    margin-left: 0;
+}
+
+li .user-main-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    +
+}
+
+li .user-container {
+    display: flex;
+}
+
+.more-icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    align-items: center;
+}
+
+li img {
+    margin-left: 20px;
+}
+
 .chat-window li {
     display: flex;
     align-items: center;
@@ -50,19 +93,19 @@ ul {
 }
 
 .online {
-    border: 2px solid green;
+    border: 5px solid green;
 }
 
 .busy {
-    border: 2px solid red;
+    border: 5px solid red;
 }
 
 .idle {
-    border: 2px solid yellow;
+    border: 5px solid yellow;
 }
 
 .not-logged-in {
-    border: 2px solid grey;
+    border: 5px solid grey;
 }
 
 .chat {
@@ -100,4 +143,81 @@ ul {
 .header img {
     height: 3rem;
     border-radius: 50%;
+}
+
+.chats-order-header {
+    height: 60px;
+    background-color: #4D276F;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-image img {
+    height: 40px;
+    border-radius: 50%;
+    float: right;
+    margin: 8px;
+}
+
+.chats-order {
+    background-color: darkgrey;
+    height: 40px;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+.chat-section {
+    border-radius: 1px;
+}
+
+.sender {
+    display: flex;
+    justify-content: right;
+    background-color: grey;
+}
+
+.textbox {
+    height: 40px;
+    background-color: #430D77;
+    display: flex;
+    vertical-align: bottom;
+    position: absolute;
+    bottom: 0;
+}
+
+.textbox input {
+    height: 20px;
+    margin: 5px;
+    width: 680px;
+}
+
+.textbox img {
+    height: 30px;
+}
+
+#userList {
+    overflow-y: scroll;
+    height: 635px;
+}
+
+.user-details i {
+    display: block;
+}
+
+.addUser img {
+    /* margin: 1px; */
+    /* margin-right: 0px; */
+    float: right;
+}
+
+.icon-div {
+    float: right;
+}
+
+.user-list div {
+    margin-left: 20px;
+}
+
+.user-list span {
+    margin-right: 0;
 }
